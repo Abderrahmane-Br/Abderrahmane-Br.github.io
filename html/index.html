@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <span class="nav__logo"></span>
+            <a href="#projects" class="nav__link active">Projects</a>
+            <a href="#contact" class="nav__link">Contact</a>
+            <a href="#resume" class="nav__link">Resume</a>
+            <a href="#about" class="nav__link">About</a>
+        </nav>
+        <section class="intro">
+            Hey,<br>
+            I'm a <span>computer engineer</span> and these are some of my <span>web projects.</span>
+        </section>
+        <div id="projects" class="projects">
+            <section class="project">
+                <div class="project__illustration">
+                    <img src="../assets/bookstore main page.jpg" alt="">
+                </div>
+                <div class="project__details">
+                    <div class="project__details__descr">
+                        <h3 class="project__title">Bookstore app</h3>
+                        <p class="project__descr">A bookstore app that cosumes Google books api with a glassmorphic UI.
+                        </p>
+                    </div>
+                    <div class="project__details__icons">
+                        <img src="../assets/javascript.svg" alt="">
+                        <img src="../assets/reactjs.svg" alt="">
+                        <img src="../assets/redux.svg" alt="">
+                        <img src="../assets/scss.svg" alt="">
+                        <img src="../assets/git.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project__illustration">
+                    <img src="../assets/lighty-square.jpg" alt="">
+                </div>
+                <div class="project__details">
+                    <div class="project__details__descr">
+                        <h3 class="project__title">Lighty square</h3>
+                        <p class="project__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, et
+                            rerum quod assumenda in laboriosam similique, atque eveniet, sint suscipit distinctio quo
+                            modi? Necessitatibus quasi, dicta autem quibusdam fuga fugit.</p>
+                    </div>
+                    <div class="project__details__icons">
+                        <img src="../assets/javascript-dark.svg" alt="">
+                        <img src="../assets/html-dark.svg" alt="">
+                        <img src="../assets/css-dark.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project__illustration">
+                </div>
+                <div class="project__details">
+                    <div class="project__details__descr">
+                        <h3 class="project__title">Distributed course management app</h3>
+                        <p class="project__descr">A crud system with a distributed database (horizontally sharded into 2
+                            shards) for
+                            course managing.</p>
+                    </div>
+                    <div class="project__details__icons">
+                        <img src="../assets/html.svg" alt="">
+                        <img src="../assets/css3.svg" alt="">
+                        <img src="../assets/javascript.svg" alt="">
+                        <img src="../assets/python.svg" alt="">
+                        <img src="../assets/mysql.svg" alt="">
+                        <img src="../assets/php.svg" alt="">
+                        <img src="../assets/apache.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project__illustration"></div>
+                <div class="project__details">
+                    <div class="project__details__descr">
+                        <h3 class="project__title">Twitter clone</h3>
+                        <p class="project__descr">A bookstore app that cosumes Google books api with a glassmorphic UI.
+                        </p>
+                    </div>
+                    <div class="project__details__icons">
+                        <img src="../assets/javascript-dark.svg" alt="">
+                        <img src="../assets/reactjs-dark.svg" alt="">
+                        <img src="../assets/scss-dark.svg" alt="">
+                        <img src="../assets/git-dark.svg" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="contact" class="contact">
+            <button>More projects</button>
+            <div class="contact__header">
+                <span>Interested in collaboration?</span>
+                <h3>Get in touch</h3>
+            </div>
+            <form action="" class="contact__form">
+                <div class="contact__fieldCont">
+                    <label for="contact__name">Name</label>
+                    <input type="text" id="contact__name" class="contact__input contact__name" name="name"
+                        placeholder="Enter your name">
+                </div>
+
+                <div class="contact__fieldCont">
+                    <label for="contact__email">Email</label>
+
+                    <input id="contact__email" type="text" class="contact__input contact__email" name="email"
+                        placeholder="Enter your email">
+                </div>
+                <div class="contact__fieldCont">
+                    <label for="contact__message">Message</label>
+
+                    <textarea id="contact__message" cols="30" rows="10" class="contact__input contact__message"
+                        name="message"></textarea>
+                </div>
+            </form>
+            <button class="contact__send">Send</button>
+        </section>
+        <section id="resume" class="resume"></section>
+        <section id="about" class="about">
+            <h3 class="about__title">About me</h3>
+            <div>
+                <span class="about__text">
+                    My name is <b>Abderrahmane</b>, I'm a computer engineer, I enjoy designing and building solutions,
+                    <u><b>web-based</b></u>
+                    ones
+                    especially,
+                    <u><b>front-end development</b></u> have always been my strong suite, I transform, with
+                    pixel-perfect
+                    precision,
+                    UI
+                    designs to highly responsive and performant interfaces.<br>
+                    Having a deep passion for computer science both theoretical and practical, I'm in a continueous
+                    journey
+                    to
+                    expand my knowledge.<br><br>
+                    Some of the technologies I have been recently working with:</span>
+                <ul class="about__techs">
+                    <li>Javascript (ES6+)</li>
+                    <li>ReactJS & Hooks</li>
+                    <li>Redux</li>
+                    <li>Scss</li>
+                    <li>Git</li>
+                    <li>HTML5 & CSS3</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/customScrollbar.js"></script>
+</body>
+
+</html>

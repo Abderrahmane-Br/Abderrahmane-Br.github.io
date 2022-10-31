@@ -1,0 +1,140 @@
+$black: #1C1E1F;
+
+@mixin dark-mode() {
+    background-color: $black;
+    color: white;
+}
+
+@mixin light-mode() {
+    background-color: white;
+    color: $black;
+}
+
+@mixin shadow ($lightMode) {
+    border: 2px solid transparent;
+    border-radius: 30px;
+
+    @if $lightMode {
+        background: rgb(255, 255, 255);
+        box-shadow: 0px min(max(.4em, 5px), 10px) 0px #1C1E1F;
+        border-color: #1C1E1F;
+        color: #1C1E1F;
+    }
+
+    @else {
+        background: #1C1E1F;
+        box-shadow: 0px min(max(.4em, 5px), 10px) 0px #FFFFFF;
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+    }
+}
+
+@mixin largeTitle {
+    font-weight: 700;
+    font-size: clamp(28px, 2.47vw, 3em);
+    margin-top: 0;
+}
+
+
+@mixin hideScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+@mixin projectHoverAnimation {
+    transform: skew(0) rotateY(0);
+    transition: all .4s;
+
+    img {
+        left: 3%;
+        width: 94%;
+        transition: all .5s;
+    }
+}
+
+
+@mixin projectSection {
+    display: flex;
+    height: auto;
+
+    &__illustration {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        align-self: center;
+        width: 37.17vw;
+        height: 23.83vw;
+        background-color: white;
+        margin-right: max(15px, 5.79vw);
+        border-radius: 20px;
+        transform: skew(5deg) rotateY(30deg);
+        transition: transform .3s ease-out;
+
+        img {
+            position: absolute;
+            left: 5%;
+            width: 98%;
+            height: 90%;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            z-index: 2;
+            transition: all .4s;
+            // box-shadow: -5px 1px 5px 3px rgba(195, 191, 191, 0.548);
+            // box-shadow: max(min(-.4em, -5px), -10px) 0px 0px #1C1E1F;
+            // border: 2px solid #1C1E1F;
+        }
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     height: 91%;
+        //     width: 96%;
+        //     background-color: rgba(195, 191, 191, 0.548);
+        //     left: 3%;
+        //     top: 5.5%;
+        //     border-radius: 10px;
+        //     opacity: .5;
+        //     filter: blur(50);
+        //     z-index: 1;
+        //     transition: opacity .3s;
+        // }
+
+    }
+
+    &:nth-of-type(even) {
+        @include light-mode;
+
+
+        .project__illustration {
+            order: 2;
+            background-color: $black;
+            margin-left: max(15px, 5.79vw);
+            margin-right: 0;
+            transform: skew(-5deg) rotateY(-20deg);
+
+            img {
+                left: -3%;
+            }
+        }
+
+        &::before {
+            background-color: $black;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        @include dark-mode;
+
+        &::before {
+            background-color: white;
+        }
+    }
+}

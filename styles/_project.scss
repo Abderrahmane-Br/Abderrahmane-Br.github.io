@@ -1,0 +1,50 @@
+.project {
+    @include projectSection;
+
+    &__title {
+        @include largeTitle;
+        margin-bottom: max(20px, 2.73vw);
+    }
+
+    &__descr {
+        font-size: clamp(14px, 1.43vw, 2em);
+        font-weight: 500;
+        line-height: 1.22em;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+
+        &__icons {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            max-width: 100%;
+            flex-wrap: wrap;
+            margin-top: 10%;
+            gap: 20px;
+        }
+
+
+
+        img {
+            fill: red;
+            margin-right: 40px;
+        }
+    }
+
+
+    // &:hover {
+    //     .project__illustration {
+    //         @include projectHoverAnimation;
+
+    //         // &::before {
+    //         //     opacity: 0;
+    //         //     transition: all .4s;
+    //         // }
+    //     }
+    // }
+}

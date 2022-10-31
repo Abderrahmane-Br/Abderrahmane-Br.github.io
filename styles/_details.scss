@@ -1,0 +1,55 @@
+@import './variables';
+
+.--details .project {
+
+
+    &__illustration {
+        position: relative;
+        display: block;
+        background-color: transparent;
+
+        img {
+            width: 90%;
+
+            &:first-child {
+                left: -10%;
+            }
+
+            &:nth-child(2) {
+                left: 10%;
+                top: 10%;
+            }
+        }
+    }
+
+
+
+    &:hover {
+        // background-color: rebeccapurple;
+
+        img {}
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+
+    }
+}
+
+@keyframes invert {
+    0% {
+        transform: rotateX(-90deg) rotateY(0) rotateZ(0) skew(5deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg) rotateY(360deg) rotateZ(0) skew(5deg);
+    }
+}
+
+@keyframes flow {}
