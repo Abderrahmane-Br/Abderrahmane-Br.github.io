@@ -1,5 +1,22 @@
 @import './variables';
 
+@mixin detailsTitle {
+    font-size: clamp(25px, 2.6vw, 2.2em);
+    font-weight: 500;
+}
+
+@mixin detailsText {
+    font-size: clamp(14px, 1.3vw, 1.8em);
+    font-weight: 400;
+}
+
+@mixin sectionStructure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content min-content min-content;
+}
+
+
 main.--details .project {
     display: flex;
     flex-direction: column;
@@ -7,13 +24,11 @@ main.--details .project {
     &__descr {
 
         &__title {
-            font-size: clamp(25px, 2.6vw, 2.2em);
-            font-weight: 500;
+            @include detailsTitle();
         }
 
         &__text {
-            font-size: clamp(14px, 1.3vw, 1.8em);
-            font-weight: 400;
+            @include detailsText();
         }
     }
 
@@ -24,6 +39,7 @@ main.--details .project {
 
         .project__descr__text {
             padding-top: max(5px, 2vw);
+            // order: 2;
         }
     }
 
@@ -33,6 +49,7 @@ main.--details .project {
         background-color: transparent;
         width: 30vw;
         height: 17vw;
+        margin-right: 0;
 
         img {
             width: 85%;
@@ -51,17 +68,22 @@ main.--details .project {
 
 
     &:nth-of-type(even) {
-        .project__illustration img {
-            animation: invert-float 3s alternate linear infinite;
+        .project__illustration {
+            order: 0;
 
-            &:first-child {
-                left: 10%;
+            img {
+                animation: invert-float 3s alternate linear infinite;
+
+                &:first-child {
+                    left: 10%;
+                }
+
+                &:nth-child(2) {
+                    left: -10%;
+                    top: 10%;
+                }
             }
 
-            &:nth-child(2) {
-                left: -10%;
-                top: 10%;
-            }
         }
     }
 
@@ -110,5 +132,21 @@ main.--details .project {
 
     100% {
         transform: rotateY(-25deg);
+    }
+}
+
+.features {
+    display: flex;
+
+    &__descr {
+        order: 2;
+    }
+
+    &__title {
+        @include detailsTitle();
+    }
+
+    &__list {
+        @include detailsText();
     }
 }

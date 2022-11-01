@@ -227,6 +227,7 @@ main.--details .project__illustration.--details {
   background-color: transparent;
   width: 30vw;
   height: 17vw;
+  margin-right: 0;
 }
 main.--details .project__illustration.--details img {
   width: 85%;
@@ -239,6 +240,9 @@ main.--details .project__illustration.--details img:first-child {
 main.--details .project__illustration.--details img:nth-child(2) {
   left: 10%;
   top: 10%;
+}
+main.--details .project:nth-of-type(even) .project__illustration {
+  order: 0;
 }
 main.--details .project:nth-of-type(even) .project__illustration img {
   -webkit-animation: invert-float 3s alternate linear infinite;
@@ -315,6 +319,21 @@ main.--details .project:nth-of-type(even) .project__illustration img:nth-child(2
     transform: rotateY(-25deg);
   }
 }
+.features {
+  display: flex;
+}
+.features__descr {
+  order: 2;
+}
+.features__title {
+  font-size: clamp(25px, 2.6vw, 2.2em);
+  font-weight: 500;
+}
+.features__list {
+  font-size: clamp(14px, 1.3vw, 1.8em);
+  font-weight: 400;
+}
+
 * {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
