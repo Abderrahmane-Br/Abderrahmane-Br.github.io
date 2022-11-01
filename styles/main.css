@@ -203,19 +203,52 @@
   margin-bottom: 0.5em;
 }
 
-.--details .project__illustration {
+main.--details .project {
+  display: flex;
+  flex-direction: column;
+}
+main.--details .project__descr__title {
+  font-size: clamp(25px, 2.6vw, 2.2em);
+  font-weight: 500;
+}
+main.--details .project__descr__text {
+  font-size: clamp(14px, 1.3vw, 1.8em);
+  font-weight: 400;
+}
+main.--details .project__body {
+  display: flex;
+}
+main.--details .project__body .project__descr__text {
+  padding-top: max(5px, 2vw);
+}
+main.--details .project__illustration.--details {
   position: relative;
   display: block;
   background-color: transparent;
+  width: 30vw;
+  height: 17vw;
 }
-.--details .project__illustration img {
-  width: 90%;
+main.--details .project__illustration.--details img {
+  width: 85%;
+  -webkit-animation: float 3s alternate linear infinite;
+          animation: float 3s alternate linear infinite;
 }
-.--details .project__illustration img:first-child {
+main.--details .project__illustration.--details img:first-child {
   left: -10%;
 }
-.--details .project__illustration img:nth-child(2) {
+main.--details .project__illustration.--details img:nth-child(2) {
   left: 10%;
+  top: 10%;
+}
+main.--details .project:nth-of-type(even) .project__illustration img {
+  -webkit-animation: invert-float 3s alternate linear infinite;
+          animation: invert-float 3s alternate linear infinite;
+}
+main.--details .project:nth-of-type(even) .project__illustration img:first-child {
+  left: 10%;
+}
+main.--details .project:nth-of-type(even) .project__illustration img:nth-child(2) {
+  left: -10%;
   top: 10%;
 }
 @-webkit-keyframes orbit {
@@ -250,8 +283,38 @@
     transform: rotateX(-90deg) rotateY(360deg) rotateZ(0) skew(5deg);
   }
 }
-@-webkit-keyframes flow {}
-@keyframes flow {}
+@-webkit-keyframes float {
+  0% {
+    transform: rotateY(10deg);
+  }
+  100% {
+    transform: rotateY(25deg);
+  }
+}
+@keyframes float {
+  0% {
+    transform: rotateY(10deg);
+  }
+  100% {
+    transform: rotateY(25deg);
+  }
+}
+@-webkit-keyframes invert-float {
+  0% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    transform: rotateY(-25deg);
+  }
+}
+@keyframes invert-float {
+  0% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    transform: rotateY(-25deg);
+  }
+}
 * {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
