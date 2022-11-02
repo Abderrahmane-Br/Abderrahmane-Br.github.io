@@ -29,10 +29,6 @@
   z-index: 2;
   transition: all 0.4s;
 }
-.project:nth-of-type(even) {
-  background-color: white;
-  color: #1C1E1F;
-}
 .project:nth-of-type(even) .project__illustration {
   order: 2;
   background-color: #1C1E1F;
@@ -45,10 +41,6 @@
 }
 .project:nth-of-type(even)::before {
   background-color: #1C1E1F;
-}
-.project:nth-of-type(odd) {
-  background-color: #1C1E1F;
-  color: white;
 }
 .project:nth-of-type(odd)::before {
   background-color: white;
@@ -406,6 +398,9 @@ section {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+section.nav {
+  padding: 0;
+}
 section.intro {
   padding-left: max(15px, 5.33vw);
   font-size: clamp(19px, 1.95vw, 1.8em);
@@ -425,15 +420,15 @@ section::before {
   z-index: -1;
 }
 section:nth-of-type(odd) {
-  background-color: white;
-  color: #1C1E1F;
+  background-color: #1C1E1F;
+  color: white;
 }
 section:nth-of-type(odd)::before {
   background-color: #1C1E1F;
 }
 section:nth-of-type(even) {
-  background-color: #1C1E1F;
-  color: white;
+  background-color: white;
+  color: #1C1E1F;
 }
 section:nth-of-type(even)::before {
   background-color: white;

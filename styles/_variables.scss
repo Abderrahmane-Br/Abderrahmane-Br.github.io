@@ -110,7 +110,7 @@ $black: #1C1E1F;
     }
 
     &:nth-of-type(even) {
-        @include light-mode;
+        // @include light-mode;
 
 
         .project__illustration {
@@ -131,7 +131,7 @@ $black: #1C1E1F;
     }
 
     &:nth-of-type(odd) {
-        @include dark-mode;
+        // @include dark-mode;
 
         &::before {
             background-color: white;

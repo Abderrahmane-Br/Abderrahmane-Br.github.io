@@ -67,6 +67,9 @@ section {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
+    &.nav {
+        padding: 0;
+    }
 
     &.intro {
         padding-left: max(15px, 5.33vw);
@@ -90,7 +93,7 @@ section {
     }
 
     &:nth-of-type(odd) {
-        @include light-mode;
+        @include dark-mode;
 
         &::before {
             background-color: $black;
@@ -98,7 +101,7 @@ section {
     }
 
     &:nth-of-type(even) {
-        @include dark-mode;
+        @include light-mode;
 
         &::before {
             background-color: white;
