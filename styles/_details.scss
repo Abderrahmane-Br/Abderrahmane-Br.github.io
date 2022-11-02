@@ -2,7 +2,7 @@
 
 @mixin detailsTitle {
     font-size: clamp(25px, 2.6vw, 2.2em);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 @mixin detailsText {
@@ -18,30 +18,25 @@
 
 
 main.--details .project {
-    display: flex;
-    flex-direction: column;
+    @include sectionStructure();
 
-    &__descr {
 
-        &__title {
-            @include detailsTitle();
-        }
-
-        &__text {
-            @include detailsText();
-        }
+    &__title {
+        @include detailsTitle();
     }
 
-
-    &__body {
-        display: flex;
-        // align-items: center;
-
-        .project__descr__text {
-            padding-top: max(5px, 2vw);
-            // order: 2;
-        }
+    &__subTitle {
+        @include detailsText();
+        grid-column: 1/span 2;
+        grid-row: 2 / 3;
     }
+
+    &__text {
+        @include detailsText();
+        padding-top: max(5px, 2vw);
+        grid-row: 3/4;
+    }
+
 
     &__illustration.--details {
         position: relative;
@@ -50,6 +45,7 @@ main.--details .project {
         width: 30vw;
         height: 17vw;
         margin-right: 0;
+        grid-row: 3/4;
 
         img {
             width: 85%;
@@ -136,17 +132,18 @@ main.--details .project {
 }
 
 .features {
-    display: flex;
+    @include sectionStructure();
 
-    &__descr {
-        order: 2;
-    }
+    &__descr {}
 
     &__title {
         @include detailsTitle();
+        grid-column: 2/3;
     }
 
     &__list {
         @include detailsText();
+        grid-column: 2/3;
+        grid-row: 3/4;
     }
 }

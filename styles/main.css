@@ -204,22 +204,26 @@
 }
 
 main.--details .project {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content;
 }
-main.--details .project__descr__title {
+main.--details .project__title {
   font-size: clamp(25px, 2.6vw, 2.2em);
-  font-weight: 500;
+  font-weight: 600;
 }
-main.--details .project__descr__text {
+main.--details .project__subTitle {
   font-size: clamp(14px, 1.3vw, 1.8em);
   font-weight: 400;
+  grid-column: 1/span 2;
+  grid-row: 2/3;
 }
-main.--details .project__body {
-  display: flex;
-}
-main.--details .project__body .project__descr__text {
+main.--details .project__text {
+  font-size: clamp(14px, 1.3vw, 1.8em);
+  font-weight: 400;
   padding-top: max(5px, 2vw);
+  grid-row: 3/4;
 }
 main.--details .project__illustration.--details {
   position: relative;
@@ -228,6 +232,7 @@ main.--details .project__illustration.--details {
   width: 30vw;
   height: 17vw;
   margin-right: 0;
+  grid-row: 3/4;
 }
 main.--details .project__illustration.--details img {
   width: 85%;
@@ -320,18 +325,21 @@ main.--details .project:nth-of-type(even) .project__illustration img:nth-child(2
   }
 }
 .features {
-  display: flex;
-}
-.features__descr {
-  order: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content;
 }
 .features__title {
   font-size: clamp(25px, 2.6vw, 2.2em);
-  font-weight: 500;
+  font-weight: 600;
+  grid-column: 2/3;
 }
 .features__list {
   font-size: clamp(14px, 1.3vw, 1.8em);
   font-weight: 400;
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 
 * {
