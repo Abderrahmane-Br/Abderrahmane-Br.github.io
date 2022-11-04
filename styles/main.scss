@@ -96,7 +96,7 @@ section {
         @include dark-mode;
 
         &::before {
-            background-color: $black;
+            background-color: white;
         }
     }
 
@@ -104,7 +104,7 @@ section {
         @include light-mode;
 
         &::before {
-            background-color: white;
+            background-color: $black;
         }
     }
 }
