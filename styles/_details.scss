@@ -146,4 +146,22 @@ main.--details .project {
         grid-column: 2/3;
         grid-row: 3/4;
     }
+
+    &__item {
+        padding-bottom: .68em;
+    }
+}
+
+.stack {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    &__item {
+        display: block;
+        padding-bottom: 1.3em;
+    }
 }
