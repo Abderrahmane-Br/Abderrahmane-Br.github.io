@@ -3,6 +3,7 @@
     &>div {
         @include shadow(false);
         padding: max(22px, 2.2vw) max(20px, 2vw);
+        text-align: left
     }
 
     &__title {

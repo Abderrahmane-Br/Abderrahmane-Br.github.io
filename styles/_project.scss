@@ -1,6 +1,11 @@
 .project {
     @include projectSection;
 
+
+    &>&__title {
+        display: none
+    }
+
     &__title {
         @include largeTitle;
         margin-bottom: max(20px, 2.73vw);
@@ -25,26 +30,60 @@
             max-width: 100%;
             flex-wrap: wrap;
             margin-top: 10%;
-            gap: 20px;
+            gap: max(10px, 1.30vw);
         }
 
 
 
         img {
             fill: red;
-            margin-right: 40px;
+            min-width: 30px;
+            min-height: 30px;
+            margin-right: max(20px, 2.60vw);
+            flex-grow: .2;
+            max-height: 5.53vw;
         }
     }
 
 
-    // &:hover {
-    //     .project__illustration {
-    //         @include projectHoverAnimation;
+    &:not(.--details):hover {
+        .project__illustration {
+            @include projectHoverAnimation;
 
-    //         // &::before {
-    //         //     opacity: 0;
-    //         //     transition: all .4s;
-    //         // }
-    //     }
-    // }
+            // &::before {
+            //     opacity: 0;
+            //     transition: all .4s;
+            // }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        text-align: center;
+    }
+
+    .project {
+        align-items: center;
+        flex-direction: column;
+
+        & &__title {
+            display: none;
+        }
+
+
+        &>&__title {
+            display: block;
+            text-align: center;
+        }
+
+        &:nth-of-type(even) &__illustration {
+            order: 0;
+        }
+
+
+        &__details {
+            text-align: center;
+        }
+    }
 }

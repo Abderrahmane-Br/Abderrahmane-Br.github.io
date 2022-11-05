@@ -6,87 +6,103 @@
 }
 
 @mixin detailsText {
-    font-size: clamp(14px, 1.3vw, 1.8em);
+    font-size: clamp(14px, 1.35vw, 1.8em);
     font-weight: 400;
+    line-height: 1.5em;
 }
 
 @mixin sectionStructure {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: min-content min-content min-content;
+
+    @media (max-width:600px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
-main.--details .project {
-    @include sectionStructure();
+main.--details {
+    @include detailsText();
+}
+
+main.--details {
+    .project {
+        @include sectionStructure();
 
 
-    &__title {
-        @include detailsTitle();
-    }
-
-    &__subTitle {
-        @include detailsText();
-        grid-column: 1/span 2;
-        grid-row: 2 / 3;
-    }
-
-    &__text {
-        @include detailsText();
-        padding-top: max(5px, 2vw);
-        grid-row: 3/4;
-    }
-
-
-    &__illustration.--details {
-        position: relative;
-        display: block;
-        background-color: transparent;
-        width: 30vw;
-        height: 17vw;
-        margin-right: 0;
-        grid-row: 3/4;
-
-        img {
-            width: 85%;
-            animation: float 3s alternate linear infinite;
-
-            &:first-child {
-                left: -10%;
-            }
-
-            &:nth-child(2) {
-                left: 10%;
-                top: 10%;
-            }
+        &__title {
+            @include detailsTitle();
         }
-    }
+
+        &__subTitle {
+            @include detailsText();
+            grid-column: 1/span 2;
+            grid-row: 2 / 3;
+        }
+
+        &__text {
+            @include detailsText();
+            padding-top: max(5px, 2vw);
+            grid-row: 3/4;
+        }
 
 
-    &:nth-of-type(even) {
-        .project__illustration {
-            order: 0;
+        &__illustration.--details {
+            position: relative;
+            display: block;
+            background-color: transparent;
+            width: max(200px, 30vw);
+            height: max(120px, 17vw);
+            margin-right: 0;
+            grid-row: 3/4;
 
             img {
-                animation: invert-float 3s alternate linear infinite;
+                width: 85%;
+                animation: float 3s alternate linear infinite;
 
                 &:first-child {
-                    left: 10%;
+                    left: -10%;
                 }
 
                 &:nth-child(2) {
-                    left: -10%;
+                    left: 10%;
                     top: 10%;
                 }
             }
+        }
 
+
+        &:nth-of-type(even) {
+            .project__illustration {
+                order: 0;
+
+                img {
+                    animation: invert-float 3s alternate linear infinite;
+
+                    &:first-child {
+                        left: 10%;
+                    }
+
+                    &:nth-child(2) {
+                        left: -10%;
+                        top: 10%;
+                    }
+                }
+
+            }
+        }
+
+        &:hover {
+            // background-color: rebeccapurple;
+
+            img {}
         }
     }
 
-    &:hover {
-        // background-color: rebeccapurple;
-
-        img {}
+    h3 {
+        margin-top: max(20px, 2.73vw);
     }
 }
 
@@ -145,6 +161,7 @@ main.--details .project {
         @include detailsText();
         grid-column: 2/3;
         grid-row: 3/4;
+        text-align: left;
     }
 
     &__item {
