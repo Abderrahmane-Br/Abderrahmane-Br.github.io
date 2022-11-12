@@ -11,15 +11,17 @@
 
 <body>
     <main>
-        <section class="nav">
-            <nav>
-                <span class="nav__logo"></span>
-                <a href="#projects" class="nav__link active">Projects</a>
-                <a href="#contact" class="nav__link">Contact</a>
-                <a href="#resume" class="nav__link">Resume</a>
-                <a href="#about" class="nav__link">About</a>
-            </nav>
-        </section>
+        <div id="home"></div>
+        <nav>
+            <span class="nav__logo"></span>
+            <a href="#home"></a>
+            <a href="#projects" class="nav__link active">P<span>rojects</span></a>
+            <a href="#contact" class="nav__link">C<span>ontact</span></a>
+            <a href="#resume" class="nav__link">R<span>esume</span></a>
+            <a href="#about" class="nav__link">A<span>bout</span></a>
+            <div class="nav__burger" onclick="document.querySelector('.sideMenu').classList.add('active')"></div>
+        </nav>
+        <section style="display: none;"></section>
         <section class="intro">
             Hey,<br>
             I'm a <span>computer engineer</span> and these are some of my <span>web projects.</span>
@@ -161,9 +163,47 @@
                 </ul>
             </div>
         </section>
+
+        <div class="footerNav">
+            <div class="footerNav__item">
+                <a href="#projects" class="footerNav__item__link">Projects</a>
+                <img src="../assets/briefcase.svg" class="footerNav__item__img1" alt="">
+            </div>
+            <hr>
+            <div class="footerNav__item">
+                <a href="#contact" class="footerNav__item__link">Contact</a>
+                <img src="../assets/mail.svg" class="footerNav__item__img2" alt="">
+            </div>
+            <hr>
+            <div class="footerNav__item">
+                <a href="#about" class="footerNav__item__link">About</a>
+                <img src="../assets/question-mark.svg" class="footerNav__item__img3" alt="">
+            </div>
+        </div>
     </main>
+    <div class="sideMenu" onclick="this.classList.toggle('active')">
+        <ul class="sideMenu__list">
+            <li class="sideMenu__item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="sideMenu__item">
+                <a href="#contact">Contact</a>
+            </li>
+            <li class="sideMenu__item">
+                <a href="#resume">Resume</a>
+            </li>
+            <li class="sideMenu__item">
+                <a href="#about">About</a>
+            </li>
+            <li class="sideMenu__item">
+                <span>Close</span>
+            </li>
+        </ul>
+        <!-- <div class="sideMenu__close">X</div> -->
+    </div>
 
     <script src="../js/customScrollbar.js"></script>
+    <script src="../js/sideNavbar.js"></script>
 </body>
 
 </html>

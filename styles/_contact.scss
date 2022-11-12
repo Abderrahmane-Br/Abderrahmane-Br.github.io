@@ -24,11 +24,11 @@
 
     &__form {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) [col-end];
-        grid-template-rows: min-content max-content min-content;
-        column-gap: max(10px, 10.3vw);
+        grid-template-columns: repeat(auto-fill, minmax(max(200px, 20.75vw), 1fr)) [col-end];
+        grid-template-rows: min-content max-content;
+        column-gap: max(120px, 10.3vw);
         row-gap: max(30px, 3.25vw);
-        width: 75%;
+        width: 80%;
         max-width: 100%;
         margin-bottom: max(15px, 1.3vw);
 
@@ -45,6 +45,7 @@
         display: flex;
         flex-direction: column;
         gap: 13px;
+        min-width: 200px;
 
         &:last-child {
             grid-column: 1/ col-end;

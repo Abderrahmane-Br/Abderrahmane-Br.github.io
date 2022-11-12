@@ -38,7 +38,7 @@
         img {
             fill: red;
             min-width: 30px;
-            min-height: 30px;
+            min-height: 40px;
             margin-right: max(20px, 2.60vw);
             flex-grow: .2;
             max-height: 5.53vw;
@@ -85,5 +85,9 @@
         &__details {
             text-align: center;
         }
+    }
+
+    .contact button.contact__send {
+        align-self: center;
     }
 }
