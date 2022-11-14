@@ -117,33 +117,25 @@ main.--details {
     }
 }
 
-@keyframes invert {
-    0% {
-        transform: rotateX(-90deg) rotateY(0) rotateZ(0) skew(5deg);
-    }
+.bookstore.--details {
+    .features__illustration.project__illustration {
 
-    100% {
-        transform: rotateX(-90deg) rotateY(360deg) rotateZ(0) skew(5deg);
-    }
-}
+        img:not(:nth-child(1)) {
+            width: auto;
+            height: auto
+        }
 
-@keyframes float {
-    0% {
-        transform: rotateY(10deg);
-    }
+        img:nth-child(2) {
+            left: 25%;
+            top: 8%;
+            height: 85%;
+        }
 
-    100% {
-        transform: rotateY(25deg);
-    }
-}
-
-@keyframes invert-float {
-    0% {
-        transform: rotateY(-10deg);
-    }
-
-    100% {
-        transform: rotateY(-25deg);
+        img:nth-child(3) {
+            left: 45%;
+            top: 18%;
+            height: 75%;
+        }
     }
 }
 
@@ -180,5 +172,36 @@ main.--details {
     &__item {
         display: block;
         padding-bottom: 1.3em;
+    }
+}
+
+
+@keyframes invert {
+    0% {
+        transform: rotateX(-90deg) rotateY(0) rotateZ(0) skew(5deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg) rotateY(360deg) rotateZ(0) skew(5deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: rotateY(10deg);
+    }
+
+    100% {
+        transform: rotateY(25deg);
+    }
+}
+
+@keyframes invert-float {
+    0% {
+        transform: rotateY(-10deg);
+    }
+
+    100% {
+        transform: rotateY(-25deg);
     }
 }
