@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <main class="--details">
+    <main class="--details bookstore">
         <nav>
             <span class="nav__logo"></span>
-            <a href="#home"></a>
-            <a href="#projects" class="nav__link active">P<span>rojects</span></a>
-            <a href="#contact" class="nav__link">C<span>ontact</span></a>
-            <a href="#resume" class="nav__link">R<span>esume</span></a>
-            <a href="#about" class="nav__link">A<span>bout</span></a>
+            <a href="" onclick="event.preventDefault(); document.querySelector('main').scrollTo(0, 0);"></a>
+            <a href="./index.html#projects" class="nav__link active">P<span>rojects</span></a>
+            <a href="./index.html#contact" class="nav__link">C<span>ontact</span></a>
+            <a href="./index.html#resume" class="nav__link">R<span>esume</span></a>
+            <a href="./index.html#about" class="nav__link">A<span>bout</span></a>
             <div class="nav__burger" onclick="document.querySelector('.sideMenu').classList.add('active')"></div>
         </nav>
         <section class="project" style="display: none"></section>
@@ -43,13 +43,16 @@
             <ul class="features__list">
                 <li class="features__item">Glassmorphic UI</li>
                 <li class="features__item">High responsive UI: screen range goes from 280px to 4k+</li>
+                <li class="features__item">Loading skeletons</li>
                 <li class="features__item">Caching api calls and crutial parts of the app state</li>
                 <li class="features__item">Live search</li>
                 <li class="features__item">Dynamic custom scrollbars</li>
             </ul>
             <div class="features__illustration project__illustration --details">
                 <img src="../assets/bookstore main page.jpg" alt="">
-                <img src="../assets/bookstore page2.jpg" alt="">
+                <img src="../assets/bookstore tablet.jpg" alt="">
+                <!-- <img src="../assets/bookstore mobile1.jpg" alt=""> -->
+                <img src="../assets/bookstore mobile2.jpg" alt="">
             </div>
         </section>
         <section class="stack">

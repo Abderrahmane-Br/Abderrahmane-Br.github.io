@@ -85,6 +85,11 @@
         &__details {
             text-align: center;
         }
+
+        &__descr,
+        &__details__descr {
+            margin-top: 5%;
+        }
     }
 
     .contact button.contact__send {
