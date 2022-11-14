@@ -51,7 +51,7 @@ nav {
         transform: translateX(0);
         transition: visibility .5s, transform .5s;
 
-        &.active {
+        &.nav__link.active {
             color: white;
             position: relative;
 
@@ -212,8 +212,26 @@ section {
                 color: white;
                 margin: max(7px, 1.1vw) 0;
 
+                &:first-of-type {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
 
-                &.active {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: auto;
+                        width: 65%;
+                        height: 65%;
+                        border-top: 4px solid white;
+                        border-left: 4px solid white;
+                        transform: rotateZ(45deg) scale(.7);
+                        animation: float 1s infinite ease-in;
+                    }
+                }
+
+                &.active:not(:first-of-type) {
                     // padding: .1em;
                     border-radius: 50%;
                     background-color: white;
@@ -417,5 +435,19 @@ section {
 
     100% {
         transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        top: 20%;
+    }
+
+    50% {
+        top: 45%
+    }
+
+    100% {
+        top: 20%;
     }
 }
