@@ -294,8 +294,8 @@ main.--details .project__illustration.--details {
 }
 main.--details .project__illustration.--details img {
   width: 85%;
-  -webkit-animation: float 3s alternate linear infinite;
-          animation: float 3s alternate linear infinite;
+  -webkit-animation: illust-float 3s alternate linear infinite;
+          animation: illust-float 3s alternate linear infinite;
 }
 main.--details .project__illustration.--details img:first-child {
   left: -10%;
@@ -308,8 +308,8 @@ main.--details .project:nth-of-type(even) .project__illustration {
   order: 0;
 }
 main.--details .project:nth-of-type(even) .project__illustration img {
-  -webkit-animation: invert-float 3s alternate linear infinite;
-          animation: invert-float 3s alternate linear infinite;
+  -webkit-animation: invert-illust-float 3s alternate linear infinite;
+          animation: invert-illust-float 3s alternate linear infinite;
 }
 main.--details .project:nth-of-type(even) .project__illustration img:first-child {
   left: 10%;
@@ -411,7 +411,7 @@ main.--details h3 {
     transform: rotateX(-90deg) rotateY(360deg) rotateZ(0) skew(5deg);
   }
 }
-@-webkit-keyframes float {
+@-webkit-keyframes illust-float {
   0% {
     transform: rotateY(10deg);
   }
@@ -419,7 +419,7 @@ main.--details h3 {
     transform: rotateY(25deg);
   }
 }
-@keyframes float {
+@keyframes illust-float {
   0% {
     transform: rotateY(10deg);
   }
@@ -427,7 +427,7 @@ main.--details h3 {
     transform: rotateY(25deg);
   }
 }
-@-webkit-keyframes invert-float {
+@-webkit-keyframes invert-illust-float {
   0% {
     transform: rotateY(-10deg);
   }
@@ -435,7 +435,7 @@ main.--details h3 {
     transform: rotateY(-25deg);
   }
 }
-@keyframes invert-float {
+@keyframes invert-illust-float {
   0% {
     transform: rotateY(-10deg);
   }
@@ -613,6 +613,7 @@ section:nth-of-type(even)::before {
 
 @media (min-width: 500px) {
   nav.onSide {
+    position: fixed;
     width: max(20px, 2.7vw);
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -845,6 +846,17 @@ section:nth-of-type(even)::before {
   }
   100% {
     transform: rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes float {
+  0% {
+    top: 20%;
+  }
+  50% {
+    top: 45%;
+  }
+  100% {
+    top: 20%;
   }
 }
 @keyframes float {

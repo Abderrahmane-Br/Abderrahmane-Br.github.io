@@ -3,19 +3,27 @@ let sections = document.querySelectorAll("main>section:not(:first-of-type, .intr
 let navLinks = document.querySelectorAll(".nav__link");
 let main = document.querySelector("main");
 let scheduled = false;
+let scrollSched = false;
 
 main.addEventListener('scroll', () => {
-    let h = parseInt(window.getComputedStyle(nav).height) + 10;
-    if (main.scrollTop > h)
-        nav.classList.add("onSide");
-    else if (nav.classList.contains("onSide")) {
-        nav.classList.remove("onSide");
-    }
+
     if (!scheduled) {
         setTimeout(() => {
             activateInViewPort(0, sections.length - 1);
             scheduled = false;
-        }, 250)
+        }, 250);
+        scheduled = true;
+    }
+
+    if (!scrollSched) {
+        setTimeout(() => {
+            if (main.scrollTop > 50)
+                nav.classList.add("onSide");
+            else if (nav.classList.contains("onSide")) {
+                nav.classList.remove("onSide");
+                scrollSched = false;
+            }
+        }, 50);
         scheduled = true;
     }
 }
@@ -43,7 +51,6 @@ function activateInViewPort(l, r) {
         let m = parseInt((r + l) / 2);
         activateInViewPort(l, m);
         activateInViewPort(m + 1, r);
-        console.log("m", m);
     }
 
     else {

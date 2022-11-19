@@ -60,7 +60,7 @@ main.--details {
 
             img {
                 width: 85%;
-                animation: float 3s alternate linear infinite;
+                animation: illust-float 3s alternate linear infinite;
 
                 &:first-child {
                     left: -10%;
@@ -79,7 +79,7 @@ main.--details {
                 order: 0;
 
                 img {
-                    animation: invert-float 3s alternate linear infinite;
+                    animation: invert-illust-float 3s alternate linear infinite;
 
                     &:first-child {
                         left: 10%;
@@ -186,7 +186,7 @@ main.--details {
     }
 }
 
-@keyframes float {
+@keyframes illust-float {
     0% {
         transform: rotateY(10deg);
     }
@@ -196,7 +196,7 @@ main.--details {
     }
 }
 
-@keyframes invert-float {
+@keyframes invert-illust-float {
     0% {
         transform: rotateY(-10deg);
     }

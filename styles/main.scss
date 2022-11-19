@@ -188,6 +188,7 @@ section {
     nav {
 
         &.onSide {
+            position: fixed;
             width: max(20px, 2.7vw);
             height: fit-content;
             flex-direction: column;
