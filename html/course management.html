@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Course management app</title>
+</head>
+
+<body>
+    <main class="--details bookstore">
+        <nav>
+            <span class="nav__logo"></span>
+            <a href="" onclick="event.preventDefault(); document.querySelector('main').scrollTo(0, 0);"></a>
+            <a href="./index.html#projects" title="Projects" class="nav__link active">P<span>rojects</span></a>
+            <a href="./index.html#contact" title="Contact" class="nav__link">C<span>ontact</span></a>
+            <a href="./index.html#resume" title="Resume" class="nav__link">R<span>esume</span></a>
+            <a href="./index.html#about" title="About" class="nav__link">A<span>bout</span></a>
+            <div class="nav__burger" onclick="document.querySelector('.sideMenu').classList.add('active')"></div>
+        </nav>
+        <section class="project" style="display: none"></section>
+        <section class="project --details">
+            <h3 class="project__title">Distributed course management app</h3>
+            <p class="project__subTitle">This project is a full-stack app with a distributed database for managing
+                courses</p>
+            <p class="project__text">I built this app as the semestrial project for the advanced databases module.
+                It consists of an horizontally sharded database (2 shards) to simulate large database scaling-up and a
+                concurrent hybrid (PHP and Python) crud system. On the front-end it uses Ajax to
+                handle the back-end communication.
+            </p>
+            <div class="project__illustration --details">
+                <img src="../assets/bookstore main page.jpg" alt="">
+                <img src="../assets/bookstore page2.jpg" alt="">
+            </div>
+        </section>
+        <section class="challenges">
+            <h3 class="project__title">Building process and challenges</h3>
+            <div>
+                <h3>How it works</h3>
+                <p>This app allows the user to create, update, read, delete and search any element of the five tables :
+                </p>
+                <p>For the back-end, Apache is used as a server, the app uses Php to handle all the single threaded
+                    operations while Python handles the concurrent operations due to its native threading
+                    interface.Finally the database design is implemented in MySQL.<br>
+                    On the other hand, for the front-end, the app is kept simple with vanilla Javascript, Css3 and
+                    Html5.
+                    In order to give a more fluid experience Ajax is widely used throughout the app.</p>
+                <h3>Challenges</h3>
+                <p>This app is by far the most challenging project I've built, it breaks down to three notable
+                    challenges</p>
+                <p><b><u>1st challenge:</u></b> After developping a
+                    fully functional app for a single database and designing a sharded one, the surprise came that the
+                    posix library was no longer supported in php thus no concurrent operation was possible. After a lot
+                    of searching and on the verge of giving up and
+                    rebuilding the app from scratch I stumbeled on the Php-Python cross scripting wich offered a simple
+                    yet effective solution.</p>
+                <p><b><u>2nd challenge:</u></b> The process of sharding and designing the distributed database was one
+                    of the
+                    most challenging parts of this project due to the abscence of any practical example, I had to look
+                    to many different paradigms and approaches that some large companies follow to get this done, I
+                    ended up with a similar approach to Oracle's.</p>
+                <p><b><u>3rd challenge:</u></b> Another problem I encountered was implementing the database
+                    normalisation in
+                    MySQL since it lacks the support of many normalisation features that one would expect them to be
+                    e.g: combined ID of a derived table. It took a lot of tricks and workarounds to get over it.</p>
+
+            </div>
+
+            <!-- <div class="features__illustration project__illustration --details">
+                <img src="../assets/bookstore main page.jpg" alt="">
+                <img src="../assets/bookstore tablet.jpg" alt="">
+                <img src="../assets/bookstore mobile2.jpg" alt="">
+            </div> -->
+        </section>
+        <section class="stack">
+            <h3 class="project__title">Stack and tools</h3>
+            <div class="stack__list">
+                <div>
+                    <span class="stack__item">Php</span>
+                    <span class="stack__item">Python</span>
+                    <span class="stack__item">MySQL</span>
+                    <span class="stack__item">Apache</span>
+                </div>
+                <div>
+                    <span class="stack__item">Javascript</span>
+                    <span class="stack__item">Ajax</span>
+                    <span class="stack__item">Html5/Css3</span>
+                </div>
+            </div>
+        </section>
+        <div class="footerNav">
+            <div class="footerNav__item">
+                <a href="#projects" class="footerNav__item__link">Projects</a>
+                <img src="../assets/briefcase.svg" class="footerNav__item__img1" alt="">
+            </div>
+            <hr>
+            <div class="footerNav__item">
+                <a href="#contact" class="footerNav__item__link">Contact</a>
+                <img src="../assets/mail.svg" class="footerNav__item__img2" alt="">
+            </div>
+            <hr>
+            <div class="footerNav__item">
+                <a href="#about" class="footerNav__item__link">About</a>
+                <img src="../assets/question-mark.svg" class="footerNav__item__img3" alt="">
+            </div>
+        </div>
+    </main>
+    <div class="sideMenu" onclick="this.classList.toggle('active')">
+        <ul class="sideMenu__list">
+            <li class="sideMenu__item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="sideMenu__item">
+                <a href="#contact">Contact</a>
+            </li>
+            <li class="sideMenu__item">
+                <a href="#resume">Resume</a>
+            </li>
+            <li class="sideMenu__item">
+                <a href="#about">About</a>
+            </li>
+            <li class="sideMenu__item">
+                <span>Close</span>
+            </li>
+        </ul>
+        <!-- <div class="sideMenu__close">X</div> -->
+    </div>
+    <script src="../js/sideNavbar.js"></script>
+
+</body>
+
+</html>
