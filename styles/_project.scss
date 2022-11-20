@@ -77,7 +77,13 @@
             text-align: center;
         }
 
+        &__illustration {
+            margin: 0;
+            margin-top: 3vw;
+        }
+
         &:nth-of-type(even) &__illustration {
+            margin-left: 0;
             order: 0;
         }
 

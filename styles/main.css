@@ -109,7 +109,12 @@
     display: block;
     text-align: center;
   }
+  .project__illustration {
+    margin: 0;
+    margin-top: 3vw;
+  }
   .project:nth-of-type(even) .project__illustration {
+    margin-left: 0;
     order: 0;
   }
   .project__details {
@@ -322,23 +327,6 @@ main.--details h3 {
   margin-top: max(20px, 2.73vw);
 }
 
-@-webkit-keyframes orbit {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
 .bookstore.--details .features__illustration.project__illustration img:not(:nth-child(1)) {
   width: auto;
   height: auto;
@@ -386,14 +374,46 @@ main.--details h3 {
 .stack__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
+  gap: 30%;
   width: 80%;
+  padding-left: 2%;
 }
 .stack__item {
   display: block;
   padding-bottom: 1.3em;
 }
 
+.challenges {
+  font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  .stack {
+    text-align: center;
+  }
+  .stack__list {
+    justify-content: center;
+    margin: 5vw auto;
+    padding: 0;
+  }
+}
+@-webkit-keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 @-webkit-keyframes invert {
   0% {
     transform: rotateX(-90deg) rotateY(0) rotateZ(0) skew(5deg);
@@ -402,7 +422,6 @@ main.--details h3 {
     transform: rotateX(-90deg) rotateY(360deg) rotateZ(0) skew(5deg);
   }
 }
-
 @keyframes invert {
   0% {
     transform: rotateX(-90deg) rotateY(0) rotateZ(0) skew(5deg);

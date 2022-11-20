@@ -106,16 +106,6 @@ main.--details {
     }
 }
 
-@keyframes orbit {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateZ(360deg);
-
-    }
-}
 
 .bookstore.--details {
     .features__illustration.project__illustration {
@@ -165,8 +155,10 @@ main.--details {
     &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: left;
+        gap: 30%;
         width: 80%;
+        padding-left: 2%;
     }
 
     &__item {
@@ -175,6 +167,33 @@ main.--details {
     }
 }
 
+.challenges {
+    font-weight: 300;
+}
+
+
+@media (max-width: 600px) {
+    .stack {
+        text-align: center;
+
+        &__list {
+            justify-content: center;
+            margin: 5vw auto;
+            padding: 0;
+        }
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+
+    }
+}
 
 @keyframes invert {
     0% {
