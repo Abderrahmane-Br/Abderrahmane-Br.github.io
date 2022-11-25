@@ -112,6 +112,24 @@ $black: #1C1E1F;
     &:nth-of-type(even) {
         // @include light-mode;
 
+        .project__link {
+            background-color: white;
+            border-color: $black;
+            color: $black;
+
+            &::before {
+                border-color: $black;
+            }
+
+            &>svg {
+                stroke: $black;
+            }
+
+            &:hover::before {
+                background-color: $black;
+                transform: all .2s;
+            }
+        }
 
         .project__illustration {
             order: 2;
