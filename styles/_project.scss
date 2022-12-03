@@ -2,7 +2,7 @@
     @include projectSection;
 
 
-    &>&__title {
+    &:not(.--details)>&__title {
         display: none
     }
 
@@ -126,12 +126,12 @@
         align-items: center;
         flex-direction: column;
 
-        & &__title {
+        &:not(.--details) &__title {
             display: none;
         }
 
 
-        &>&__title {
+        &:not(.--details)>&__title {
             display: block;
             text-align: center;
         }
