@@ -57,6 +57,7 @@ main.--details {
             height: max(120px, 17vw);
             margin-right: 0;
             grid-row: 3/4;
+            justify-self: right;
 
             img {
                 width: 85%;
@@ -115,14 +116,18 @@ main.--details {
             height: auto
         }
 
+        img:nth-child(1) {
+            left: 0;
+        }
+
         img:nth-child(2) {
-            left: 25%;
+            left: 30%;
             top: 8%;
             height: 85%;
         }
 
         img:nth-child(3) {
-            left: 45%;
+            left: 50%;
             top: 18%;
             height: 75%;
         }
