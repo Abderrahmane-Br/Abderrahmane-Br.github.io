@@ -38,7 +38,6 @@
         display: flex;
         align-items: center;
         gap: .42em;
-
         // transform: translateY(0);
         // transition: transform .2s;
 
@@ -110,6 +109,11 @@
         .project__illustration {
             @include projectHoverAnimation;
 
+            .project__gif {
+                display: inline;
+                animation: opacity1 .3s forwards;
+            }
+
             // &::before {
             //     opacity: 0;
             //     transition: all .4s;
@@ -165,5 +169,12 @@
 
     .contact button.contact__send {
         align-self: center;
+    }
+}
+
+
+@keyframes opacity1 {
+    100% {
+        opacity: 1;
     }
 }

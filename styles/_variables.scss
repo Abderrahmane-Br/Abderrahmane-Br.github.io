@@ -50,7 +50,8 @@ $black: #1C1E1F;
     transform: skew(0) rotateY(0);
     transition: all .4s;
 
-    img {
+    img,
+    video {
         left: 3%;
         width: 94%;
         transition: all .5s;
@@ -77,7 +78,8 @@ $black: #1C1E1F;
         transform: skew(5deg) rotateY(30deg);
         transition: transform .3s ease-out;
 
-        img {
+        img,
+        video {
             position: absolute;
             left: 5%;
             width: 98%;
@@ -86,10 +88,18 @@ $black: #1C1E1F;
             max-height: 100%;
             border-radius: 10px;
             z-index: 2;
+            background-color: black;
+            // object-fit: fill;
             transition: all .4s;
             // box-shadow: -5px 1px 5px 3px rgba(195, 191, 191, 0.548);
             // box-shadow: max(min(-.4em, -5px), -10px) 0px 0px #1C1E1F;
             // border: 2px solid #1C1E1F;
+        }
+
+        img.project__gif,
+        video.project__gif {
+            display: none;
+            opacity: 0;
         }
 
         // &::before {
@@ -138,8 +148,10 @@ $black: #1C1E1F;
             margin-right: 0;
             transform: skew(-5deg) rotateY(-20deg);
 
-            img {
+            img,
+            video {
                 left: -3%;
+                background-color: white;
             }
         }
 
