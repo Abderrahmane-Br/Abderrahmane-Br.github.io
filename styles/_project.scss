@@ -70,7 +70,8 @@
     }
 
     &__descr {
-        font-size: clamp(14px, 1.43vw, 2em);
+        // font-size: clamp(14px, 1.43vw, 2em);
+        font-size: clamp(14px, 1.25vw, 2em);
         font-weight: 400;
         line-height: 1.22em;
         // padding-left: 1%;
