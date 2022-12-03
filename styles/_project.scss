@@ -19,6 +19,9 @@
         width: fit-content;
         z-index: 1;
         margin-bottom: max(20px, 3.2vw);
+        height: fit-content;
+        max-width: 100%;
+        flex-wrap: wrap;
     }
 
     &__link {
@@ -26,6 +29,7 @@
         font-size: clamp(10px, .92vw, 1.3em);
         padding: .15em .85em;
         font-weight: 600;
+        line-height: 1.2;
         border: 2px solid white;
         border-radius: 1em;
         background-color: $black;

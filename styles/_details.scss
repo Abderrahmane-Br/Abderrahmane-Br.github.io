@@ -14,7 +14,7 @@
 @mixin sectionStructure {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content min-content;
 
     @media (max-width:600px) {
         display: flex;
@@ -72,6 +72,15 @@ main.--details {
                     top: 10%;
                 }
             }
+        }
+
+        &__links {
+            // grid-column: 1/2;
+            // grid-row: 4/5;
+            justify-self: right;
+            align-self: center;
+            margin-top: max(20px, 2.73vw);
+            margin-right: 2%;
         }
 
 
@@ -178,6 +187,13 @@ main.--details {
 
 
 @media (max-width: 600px) {
+
+    .project__links,
+    .project__illustration {
+        align-self: center;
+        margin-left: 0;
+    }
+
     .stack {
         text-align: center;
 
