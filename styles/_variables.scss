@@ -168,3 +168,11 @@ $black: #1C1E1F;
         }
     }
 }
+
+button:hover {
+    cursor: pointer;
+
+    &#moreProjects {
+        text-decoration: underline;
+    }
+}

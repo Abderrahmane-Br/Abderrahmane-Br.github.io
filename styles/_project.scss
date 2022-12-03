@@ -120,6 +120,10 @@
             // }
         }
     }
+
+    &.invisible {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
