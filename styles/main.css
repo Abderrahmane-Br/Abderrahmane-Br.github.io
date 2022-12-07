@@ -636,6 +636,14 @@ nav {
   padding-left: 20%;
   transition: top 0.25s, left 0.25s, width 0.25s;
 }
+nav .nav__avatar {
+  position: absolute;
+  width: 3vw;
+  min-width: 25px;
+  left: 3%;
+  border-radius: 15%;
+  border: 1px solid white;
+}
 nav a {
   visibility: visible;
   color: #C5C5C5;
@@ -706,13 +714,20 @@ section.nav {
   padding: 0;
 }
 section.intro {
+  position: relative;
   padding-left: max(15px, 5.33vw);
-  font-size: clamp(19px, 1.95vw, 1.8em);
+  font-size: clamp(16px, 1.65vw, 1.8em);
 }
 section.intro span {
-  font-size: clamp(20px, 2.3vw, 1.9em);
+  font-size: clamp(17px, 2vw, 1.9em);
   font-weight: 700;
   text-decoration: underline;
+}
+section.intro .intro__avatar {
+  position: absolute;
+  width: 15vw;
+  right: 0;
+  transform: translateY(-50%);
 }
 section::before {
   content: "";
@@ -826,6 +841,9 @@ section:nth-of-type(even)::before {
     width: 1em;
     border-top: 2px solid white;
     background-color: transparent;
+  }
+  nav.onSide img {
+    display: none;
   }
 }
 @media (max-width: 500px) {
@@ -952,6 +970,11 @@ section:nth-of-type(even)::before {
     right: 0;
     opacity: 1;
     transition: all 0.3s;
+  }
+}
+@media (max-width: 600px) {
+  .intro__avatar {
+    display: none;
   }
 }
 @-webkit-keyframes flipNavAfter {
