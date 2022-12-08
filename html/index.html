@@ -401,7 +401,9 @@
                 <span>Interested in collaboration?</span>
                 <h3>Get in touch</h3>
             </div>
-            <form action="" class="contact__form">
+            <form action="https://formsubmit.co/oudba92@gmail.com" method="post" class="contact__form"
+                onsubmit="console.log('submitted')">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="contact__fieldCont">
                     <label for="contact__name">Name</label>
                     <input type="text" id="contact__name" class="contact__input contact__name" name="name"
@@ -420,8 +422,8 @@
                     <textarea id="contact__message" cols="30" rows="10" class="contact__input contact__message"
                         name="message"></textarea>
                 </div>
+                <button class="contact__send" type="submit">Send</button>
             </form>
-            <button class="contact__send">Send</button>
         </section>
         <section id="resume" class="resume"></section>
         <section id="about" class="about">
