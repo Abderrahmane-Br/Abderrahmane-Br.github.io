@@ -235,11 +235,12 @@ section {
             background-color: black;
             // filter: invert(150%);
             mix-blend-mode: difference;
-            transition: top .7s, left .5s, width .15s, height .25s;
             box-shadow: 4px 3px 0px white;
             border: 2px solid white;
             border-radius: max(10px, 1.95vw);
             box-sizing: content-box;
+            transform: translateY(-50%);
+            transition: top .7s, left .5s, width .15s, height .25s;
 
             a {
                 position: relative;

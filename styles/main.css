@@ -803,11 +803,12 @@ section:nth-of-type(even)::before {
     padding-left: 0;
     background-color: black;
     mix-blend-mode: difference;
-    transition: top 0.7s, left 0.5s, width 0.15s, height 0.25s;
     box-shadow: 4px 3px 0px white;
     border: 2px solid white;
     border-radius: max(10px, 1.95vw);
     box-sizing: content-box;
+    transform: translateY(-50%);
+    transition: top 0.7s, left 0.5s, width 0.15s, height 0.25s;
   }
   nav.onSide a {
     position: relative;
