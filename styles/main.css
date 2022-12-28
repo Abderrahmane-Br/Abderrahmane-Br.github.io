@@ -589,57 +589,6 @@ main.--details h3 {
     transform: rotateY(-25deg);
   }
 }
-button:hover {
-  cursor: pointer;
-}
-button:hover#moreProjects {
-  text-decoration: underline;
-}
-
-main.thankYou {
-  background-color: #1C1E1F;
-}
-main.thankYou .container {
-  width: 50vw;
-  min-width: 270px;
-  margin: 10vw auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2em;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  background: #1C1E1F;
-  box-shadow: 0px min(max(0.4em, 5px), 10px) 0px #FFFFFF;
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-}
-main.thankYou .container h1 {
-  font-size: clamp(1em, 2.4vw, 2.5em);
-}
-main.thankYou .container p {
-  font-size: clamp(0.8em, 1.4vw, 1.3em);
-}
-main.thankYou .container img {
-  width: 80%;
-}
-main.thankYou .container a {
-  border: 2px solid transparent;
-  border-radius: 30px;
-  background: #1C1E1F;
-  box-shadow: 0px min(max(0.4em, 5px), 10px) 0px #FFFFFF;
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-  text-align: center;
-  font-weight: 600;
-  padding: max(6px, 0.4em) 2.5em;
-  font-size: clamp(14px, 1.3vw, 1.5em);
-}
-main.thankYou .container a:hover {
-  text-decoration: underline;
-}
-
 * {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
