@@ -598,11 +598,12 @@ button:hover#moreProjects {
 
 main.thankYou {
   background-color: #1C1E1F;
+  overflow: hidden;
 }
 main.thankYou .container {
-  width: 50vw;
+  width: 40vw;
   min-width: 270px;
-  margin: 10vw auto;
+  margin: 5vw auto;
   text-align: center;
   display: flex;
   flex-direction: column;

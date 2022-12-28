@@ -2,11 +2,12 @@
 
 main.thankYou {
     background-color: $black;
+    overflow: hidden;
 
     .container {
-        width: 50vw;
+        width: 40vw;
         min-width: 270px;
-        margin: 10vw auto;
+        margin: 5vw auto;
         text-align: center;
         display: flex;
         flex-direction: column;
