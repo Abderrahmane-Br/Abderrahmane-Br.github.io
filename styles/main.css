@@ -446,6 +446,9 @@ main.--details h3 {
   margin-top: max(20px, 2.73vw);
 }
 
+.bookstore.--details .features__illustration.project__illustration {
+  justify-self: center;
+}
 .bookstore.--details .features__illustration.project__illustration img:not(:nth-child(1)) {
   width: auto;
   height: auto;

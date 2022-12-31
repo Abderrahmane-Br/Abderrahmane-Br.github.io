@@ -120,6 +120,8 @@ main.--details {
 .bookstore.--details {
     .features__illustration.project__illustration {
 
+        justify-self: center;
+
         img:not(:nth-child(1)) {
             width: auto;
             height: auto
