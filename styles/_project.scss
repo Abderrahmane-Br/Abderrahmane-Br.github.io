@@ -109,6 +109,10 @@
         .project__illustration {
             @include projectHoverAnimation;
 
+            img:first-child {
+                opacity: 0;
+            }
+
             .project__gif {
                 display: inline;
                 animation: opacity1 .3s forwards;

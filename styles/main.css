@@ -176,6 +176,9 @@ button:hover#moreProjects {
   width: 94%;
   transition: all 0.5s;
 }
+.project:not(.--details):hover .project__illustration img:first-child {
+  opacity: 0;
+}
 .project:not(.--details):hover .project__illustration .project__gif {
   display: inline;
   -webkit-animation: opacity1 0.3s forwards;
