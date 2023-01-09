@@ -183,6 +183,7 @@ section {
 }
 
 .email {
+    font-size: clamp(10px, 1.2vw, 1.5em);
     color: white;
     // width: fit-content;
     mix-blend-mode: difference;
