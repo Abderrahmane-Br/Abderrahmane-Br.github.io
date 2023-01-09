@@ -90,5 +90,9 @@
         &__form {
             width: 100%;
         }
+
+        button#{&}__send {
+            margin: 0 auto;
+        }
     }
 }
