@@ -219,6 +219,21 @@ section {
     }
 }
 
+.resume {
+    h3 {
+        display: inline;
+    }
+
+    a {
+        @include shadow(true);
+        padding: max(5px, .15em) max(15px, .08em);
+        font-size: clamp(12px, 1.3vw, 1.3em);
+        font-weight: 600;
+        float: right;
+        margin-right: 13%;
+    }
+}
+
 
 @media (min-width: 500px) {
 
@@ -455,6 +470,18 @@ section {
 @media (max-width: 600px) {
     .intro__avatar {
         display: none;
+    }
+
+    .resume {
+        h3 {
+            display: block;
+        }
+
+        a {
+            float: none;
+            margin: 0 auto;
+            width: fit-content;
+        }
     }
 }
 
