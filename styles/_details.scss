@@ -190,10 +190,13 @@ main.--details {
 
 @media (max-width: 600px) {
 
-    .project__links,
-    .project__illustration {
-        align-self: center;
-        margin-left: 0;
+    .--details {
+
+        .project__links,
+        .project__illustration {
+            align-self: center;
+            margin-left: 0;
+        }
     }
 
     .stack {

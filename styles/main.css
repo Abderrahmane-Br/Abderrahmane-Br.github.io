@@ -221,9 +221,6 @@ button:hover#moreProjects {
   .project__descr, .project__details__descr {
     margin-top: 5%;
   }
-  .contact button.contact__send {
-    align-self: center;
-  }
 }
 @-webkit-keyframes opacity1 {
   100% {
@@ -323,6 +320,9 @@ button:hover#moreProjects {
 @media (max-width: 600px) {
   .contact__form {
     width: 100%;
+  }
+  .contact button.contact__send {
+    margin: 0 auto;
   }
 }
 .about > div {
@@ -517,8 +517,8 @@ main.--details h3 {
 }
 
 @media (max-width: 600px) {
-  .project__links,
-.project__illustration {
+  .--details .project__links,
+.--details .project__illustration {
     align-self: center;
     margin-left: 0;
   }
@@ -764,6 +764,7 @@ section:nth-of-type(even)::before {
 }
 
 .email {
+  font-size: clamp(10px, 1.2vw, 1.5em);
   color: white;
   mix-blend-mode: difference;
   position: absolute;
@@ -794,6 +795,23 @@ section:nth-of-type(even)::before {
   width: 100%;
   border-radius: 20px;
   border: 1px solid white;
+}
+
+.resume h3 {
+  display: inline;
+}
+.resume a {
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px min(max(0.4em, 5px), 10px) 0px #1C1E1F;
+  border-color: #1C1E1F;
+  color: #1C1E1F;
+  padding: max(5px, 0.15em) max(15px, 0.08em);
+  font-size: clamp(12px, 1.3vw, 1.3em);
+  font-weight: 600;
+  float: right;
+  margin-right: 13%;
 }
 
 @media (min-width: 500px) {
@@ -997,6 +1015,16 @@ section:nth-of-type(even)::before {
 @media (max-width: 600px) {
   .intro__avatar {
     display: none;
+  }
+  .resume h3 {
+    display: block;
+  }
+  .resume a {
+    float: none;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @-webkit-keyframes flipNavAfter {
