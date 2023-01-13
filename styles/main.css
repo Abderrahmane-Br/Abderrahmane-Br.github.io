@@ -610,6 +610,10 @@ body {
   overflow: hidden;
 }
 
+body {
+  position: relative;
+}
+
 main {
   height: 100%;
   scroll-behavior: smooth;
